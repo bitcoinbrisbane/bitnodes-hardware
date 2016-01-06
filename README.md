@@ -22,7 +22,7 @@ Each unit comes fully assembled and consumes as low as 2.5W during normal operat
 ## Remote Access
 SSH is enabled on your Bitnodes Hardware if you need remote shell access from another computer in the same LAN. Login as `bitnodes` with `bitnodes` as the password. Be sure to change the password as soon as you are logged in. `root` password has been removed for security reason. You will need to be logged in as `bitnodes`, which has sudo access, to execute privileged commands.
 
-    $ ssh bitnodes@LAN_IP_ADDRESS
+    $ ssh ubuntu@LAN_IP_ADDRESS
     $ passwd
 
 ## Port Forwarding
@@ -111,7 +111,7 @@ Replace the content of the file with the following.
 
 Create a PostgreSQL user and database for use by the Django project.
 
-    $ sudo -u postgres createuser --superuser --echo bitnodes
+    $ sudo -u postgres createuser --superuser --echo ubuntu
     $ createdb bitnodes
 
 Update sudoers file to allow normal user to execute certain privileged commands without password prompt.
